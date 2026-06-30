@@ -96,7 +96,7 @@ module tb_controller;
     // 5) Ensure in RESET: ld=1, NbarT=0
     console:// no op
     @(posedge clk); check_fsm(RESET_ST);
-
+    
     // 6) Toggle start again and verify cycle
     start = 1; cout = 0;
     @(posedge clk); check_fsm(TEST_ST);
